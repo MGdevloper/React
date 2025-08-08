@@ -1,11 +1,23 @@
 import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(5)
+
+  const add=()=>{
+    setCount(prev=> prev + 1)
+  }
+
+  const subtract=()=>{
+    setCount(prev=> prev - 1)
+  }
 
   return (
     <>
-      <div>hii</div>
+    <input value={count} type="text" />
+    <button onClick={add}>add</button>
+    <button onClick={subtract}>subtract</button>
+
+
     </>
   )
 }
