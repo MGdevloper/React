@@ -45,7 +45,7 @@ function Input(
                     onChange={(e) => {
                         if (label.toLowerCase() == "from") setFromCurrency && setFromCurrency(e.target.value)
                         if (label.toLowerCase() == "to") setToCurrency && setToCurrency(e.target.value)
-                        setSelected(e.target.value)
+                        
                     }}
                     className="customshadow w-[25%] h-[30px] text-blue-900 bg-white/80 rounded-md  border border-blue-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-center"
                     name="select"
