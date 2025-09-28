@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* Page base tweaks */
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Small custom utilities */
+.card-backdrop {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.85));
+}
+
+/* screen-reader only helper */
+.sr-only {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* minor shadow tweak used by inputs */
+.soft-shadow {
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+/* checkbox focus visual */
+input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(16,185,129,0.08);
+    border-radius: 6px;
+}
+
+/* subtle elevated button used by Add button */
+.btn-elevated {
+    box-shadow: 0 10px 25px rgba(16,185,129,0.12);
+}
+
+.hint-muted {
+    color: rgba(107,114,128,0.9);
+    font-size: 0.78rem;
+}
+
+@media (width<503px) {
+    .todo {
+
+        flex-direction: column;
+    }
+
+}
+
+/* ensure truncate class works properly on inputs */
+.truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* subtle transform on group hover */
+.group:hover {
+    transform: translateY(-2px);
+}
+.todolistctn{
+    max-height: 600px;
+    overflow-y: scroll;
+    padding: 5px 0px 5px 0px;
+}
+.todolistctn::-webkit-scrollbar{
+    background-color: transparent;
+
+    width: 10px;
+
+}
+.todolistctn::-webkit-scrollbar-thumb{
+    background-color: rgba(107,114,128,0.4);
+    border-radius: 10px;}
